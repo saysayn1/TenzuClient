@@ -1,0 +1,116 @@
+---- Minecraft Crash Report ----
+// Daisy, daisy...
+
+Time: 2025-07-10 21:05
+Description: Ticking entity
+
+java.lang.NullPointerException: Cannot invoke "fun.rich.client.feature.Feature.isEnabled()" because the return value of "fun.rich.client.feature.FeatureManager.getFeature(java.lang.Class)" is null
+	at net.minecraft.entity.player.EntityPlayer.getEyeHeight(EntityPlayer.java:2040)
+	at net.minecraft.entity.Entity.isEntityInsideOpaqueBlock(Entity.java:1953)
+	at net.minecraft.entity.player.EntityPlayer.isEntityInsideOpaqueBlock(EntityPlayer.java:1344)
+	at net.minecraft.entity.EntityLivingBase.onEntityUpdate(EntityLivingBase.java:338)
+	at net.minecraft.entity.Entity.onUpdate(Entity.java:524)
+	at net.minecraft.entity.EntityLivingBase.onUpdate(EntityLivingBase.java:1971)
+	at net.minecraft.entity.player.EntityPlayer.onUpdate(EntityPlayer.java:290)
+	at net.minecraft.client.entity.EntityOtherPlayerMP.onUpdate(EntityOtherPlayerMP.java:71)
+	at net.minecraft.world.World.updateEntityWithOptionalForce(World.java:1991)
+	at net.minecraft.world.World.updateEntity(World.java:1955)
+	at net.minecraft.world.World.updateEntities(World.java:1795)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1816)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1181)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:545)
+	at net.minecraft.client.main.Main.main(Main.java:116)
+	at Start.main(Start.java:11)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Client thread
+Stacktrace:
+	at net.minecraft.entity.player.EntityPlayer.getEyeHeight(EntityPlayer.java:2040)
+	at net.minecraft.entity.Entity.isEntityInsideOpaqueBlock(Entity.java:1953)
+	at net.minecraft.entity.player.EntityPlayer.isEntityInsideOpaqueBlock(EntityPlayer.java:1344)
+	at net.minecraft.entity.EntityLivingBase.onEntityUpdate(EntityLivingBase.java:338)
+	at net.minecraft.entity.Entity.onUpdate(Entity.java:524)
+	at net.minecraft.entity.EntityLivingBase.onUpdate(EntityLivingBase.java:1971)
+	at net.minecraft.entity.player.EntityPlayer.onUpdate(EntityPlayer.java:290)
+	at net.minecraft.client.entity.EntityOtherPlayerMP.onUpdate(EntityOtherPlayerMP.java:71)
+	at net.minecraft.world.World.updateEntityWithOptionalForce(World.java:1991)
+	at net.minecraft.world.World.updateEntity(World.java:1955)
+
+-- Entity being ticked --
+Details:
+	Entity Type: null (net.minecraft.client.entity.EntityOtherPlayerMP)
+	Entity ID: 2130953
+	Entity Name: loltipxdxaxa
+	Entity's Exact location: -5.19, 44.80, 50.86
+	Entity's Block location: World: (-6,44,50), Chunk: (at 10,2,2 in -1,3; contains blocks -16,0,48 to -1,255,63), Region: (-1,0; contains chunks -32,0 to -1,31, blocks -512,0,0 to -1,255,511)
+	Entity's Momentum: -0.18, -0.59, -0.07
+	Entity's Passengers: []
+	Entity's Vehicle: ~~ERROR~~ NullPointerException: Cannot invoke "net.minecraft.entity.Entity.toString()" because the return value of "net.minecraft.entity.Entity.getRidingEntity()" is null
+Stacktrace:
+	at net.minecraft.world.World.updateEntities(World.java:1795)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 16 total; [EntityPlayerSP['dexca63'/2133933, l='MpServer', x=13.13, y=44.00, z=-4.85], EntityOtherPlayerMP['CIT-a00f837e2065'/162, l='MpServer', x=7.50, y=45.00, z=7.50], EntityOtherPlayerMP['Miller_XXD'/2132646, l='MpServer', x=1.43, y=45.00, z=-0.85], EntityOtherPlayerMP['CrumbleKuki555'/2131885, l='MpServer', x=2.30, y=45.00, z=0.90], EntityOtherPlayerMP['dan5218129'/2127621, l='MpServer', x=-4.77, y=44.00, z=2.93], EntityOtherPlayerMP['Acvildeon'/2059092, l='MpServer', x=29.80, y=40.94, z=8.48], EntityOtherPlayerMP['CIT-41386cd70a79'/149, l='MpServer', x=35.50, y=41.00, z=-23.50], EntityOtherPlayerMP['CIT-d06a68ee8551'/166, l='MpServer', x=34.50, y=41.00, z=-31.50], EntityOtherPlayerMP['bodia71732'/2125694, l='MpServer', x=30.91, y=41.00, z=-30.76], EntityOtherPlayerMP['david_10109'/2130417, l='MpServer', x=0.28, y=44.00, z=-6.49], EntityOtherPlayerMP['urumasun213'/1984244, l='MpServer', x=56.38, y=41.00, z=16.86], EntityOtherPlayerMP['dai_report_cit'/2109572, l='MpServer', x=22.39, y=43.00, z=-6.28], EntityOtherPlayerMP['CIT-76f82d3e625a'/186, l='MpServer', x=-27.53, y=45.00, z=-51.47], EntityOtherPlayerMP['Magellan'/2103640, l='MpServer', x=-7.70, y=41.46, z=24.10], EntityOtherPlayerMP['windows1'/1375766, l='MpServer', x=43.73, y=40.94, z=14.18], EntityOtherPlayerMP['loltipxdxaxa'/2130953, l='MpServer', x=-5.19, y=44.80, z=50.86]]
+	Chunk stats: MultiplayerChunkCache: 361, 361
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (0,45,0), Chunk: (at 0,2,0 in 0,0; contains blocks 0,0,0 to 15,255,15), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 169836 game time, 1009000 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+	Forced entities: 113 total; [EntityOtherPlayerMP['windows1'/1375766, l='MpServer', x=43.73, y=40.94, z=14.18], EntityOtherPlayerMP['Acvildeon'/2059092, l='MpServer', x=29.80, y=40.94, z=8.48], EntityOtherPlayerMP['leahsbw0198'/2065935, l='MpServer', x=46.00, y=36.80, z=-1.86], EntityOtherPlayerMP['dan5218129'/2127621, l='MpServer', x=-4.77, y=44.00, z=2.93], EntityItem['item.item.porkchopCooked'/2130949, l='MpServer', x=-6.09, y=44.00, z=5.60], EntityOtherPlayerMP['CIT-41386cd70a79'/149, l='MpServer', x=35.50, y=41.00, z=-23.50], EntityOtherPlayerMP['loltipxdxaxa'/2130953, l='MpServer', x=-5.19, y=44.80, z=50.86], EntityOtherPlayerMP['CIT-d06a68ee8551'/166, l='MpServer', x=34.50, y=41.00, z=-31.50], EntityOtherPlayerMP['bodia71732'/2125694, l='MpServer', x=30.91, y=41.00, z=-30.76], EntityOtherPlayerMP['CIT-76f82d3e625a'/186, l='MpServer', x=-27.53, y=45.00, z=-51.47], EntityOtherPlayerMP['fgfgmodfggod'/1990737, l='MpServer', x=22.95, y=42.39, z=-53.61], EntityOtherPlayerMP['sonixxxx'/2132346, l='MpServer', x=19.70, y=41.50, z=-4.00], EntityOtherPlayerMP['KARMA01'/2130869, l='MpServer', x=9.92, y=41.00, z=-23.70], EntityOtherPlayerMP['david_10109'/2130417, l='MpServer', x=0.28, y=44.00, z=-6.49], EntityOtherPlayerMP['dexca63'/-1, l='MpServer', x=0.16, y=45.00, z=1.14], EntityOtherPlayerMP['Gnoynui_ded'/2135459, l='MpServer', x=0.81, y=45.00, z=0.58], EntityOtherPlayerMP['windows1'/1375766, l='MpServer', x=65.22, y=45.30, z=-1.05], EntityOtherPlayerMP['urumasun213'/1984244, l='MpServer', x=56.38, y=41.00, z=16.86], EntityOtherPlayerMP['Magellan'/2103640, l='MpServer', x=66.03, y=42.25, z=15.58], EntityOtherPlayerMP['Acvildeon'/2059092, l='MpServer', x=29.80, y=40.94, z=8.48], EntityOtherPlayerMP['Gnoynui_ded'/2138076, l='MpServer', x=1.40, y=45.00, z=0.74], EntityOtherPlayerMP['amrfio'/2127875, l='MpServer', x=-0.19, y=45.00, z=0.34], EntityOtherPlayerMP['dai_report_cit'/2109572, l='MpServer', x=22.39, y=43.00, z=-6.28], EntityOtherPlayerMP['Gamburger23'/2107005, l='MpServer', x=-0.05, y=45.00, z=0.50], EntityOtherPlayerMP['bodia71732'/2125694, l='MpServer', x=30.91, y=41.00, z=-30.76], EntityArmorStand['§fЦены на привилегии (1 месяц):'/360, l='MpServer', x=7.50, y=49.13, z=-6.50], EntityArmorStand['Armor Stand'/361, l='MpServer', x=7.50, y=48.88, z=-6.50], EntityArmorStand[' §c§l«ɢʀɪᴇғᴇʀ»§7 - §f14 руб.'/362, l='MpServer', x=7.50, y=48.63, z=-6.50], EntityArmorStand[' §6§l«ᴍᴜsᴛᴀɴɢ»§7 - §f59 руб.'/363, l='MpServer', x=7.50, y=48.38, z=-6.50], EntityArmorStand['  §b§l«ɢʜᴀsᴛ»§7 - §f179 руб.'/364, l='MpServer', x=7.50, y=48.13, z=-6.50], EntityArmorStand['  §c§l«ᴡɪᴛʜᴇʀ»§7 - §f389 руб.'/365, l='MpServer', x=7.50, y=47.88, z=-6.50], EntityArmorStand[' §a§l«ᴋʀᴀᴋᴇɴ»§7 - §f759 руб.'/366, l='MpServer', x=7.50, y=47.63, z=-6.50], EntityArmorStand[' §5§l«ᴅʀ§d§lᴀɢᴏɴ»§7 - §f999 руб.'/367, l='MpServer', x=7.50, y=47.38, z=-6.50], EntityArmorStand['  §4§l«sᴛɪɴ§c§lɢᴇʀ» §7- §f1390 руб.'/368, l='MpServer', x=7.50, y=47.13, z=-6.50], EntityArmorStand['  §5§l«ᴇᴛᴇʀɴɪᴛʏ» §7- §f2190 руб.'/369, l='MpServer', x=7.50, y=46.88, z=-6.50], EntityArmorStand['Armor Stand'/370, l='MpServer', x=7.50, y=46.63, z=-6.50], EntityArmorStand['§fЦены на кейсы с донатом:'/371, l='MpServer', x=7.50, y=46.38, z=-6.50], EntityArmorStand['§61 кейс§7 - от §f119 р. §7(119 р/шт)'/372, l='MpServer', x=7.50, y=46.13, z=-6.50], EntityArmorStand['§62 кейса§7 - от §f216 р. §7(108 р/шт)'/373, l='MpServer', x=7.50, y=45.88, z=-6.50], EntityArmorStand['§bРекомендуем:                     '/374, l='MpServer', x=7.50, y=45.63, z=-6.50], EntityArmorStand['§63 кейса§7 - от §f269 р. §7(89 р/шт)'/375, l='MpServer', x=7.50, y=45.38, z=-6.50], EntityArmorStand['§65 кейсов§7 - от §f419 р. §7(84 р/шт)'/376, l='MpServer', x=7.50, y=45.13, z=-6.50], EntityOtherPlayerMP['Magellan'/2103640, l='MpServer', x=-7.70, y=41.46, z=24.10], EntityArmorStand['§610 кейсов§7 - от §f679 р. §7(68 р/шт)'/377, l='MpServer', x=7.50, y=44.88, z=-6.50], EntityArmorStand['Armor Stand'/378, l='MpServer', x=7.50, y=44.63, z=-6.50], EntityArmorStand['§fПокупка на сайте §6▶ §lHolyWorld.me'/379, l='MpServer', x=7.50, y=44.38, z=-6.50], EntityArmorStand['§6* §fДонат на всех лайтах общий'/380, l='MpServer', x=7.50, y=44.13, z=-6.50], EntityArmorStand['§6Полезные команды:'/381, l='MpServer', x=0.50, y=48.93, z=10.50], EntityArmorStand['Armor Stand'/382, l='MpServer', x=0.50, y=48.68, z=10.50], EntityArmorStand['§fМеню сервера §8- §b/menu'/383, l='MpServer', x=0.50, y=48.43, z=10.50], EntityArmorStand['§fВыход со спавна §8- §b/rtp'/384, l='MpServer', x=0.50, y=48.18, z=10.50], EntityArmorStand['§fРасширение мира §8- §b/wextend help'/385, l='MpServer', x=0.50, y=47.93, z=10.50], EntityArmorStand['§fПомощь по приватам §8- §b/ps help'/386, l='MpServer', x=0.50, y=47.68, z=10.50], EntityArmorStand['§fТорговая площадка §8- §b/ah'/387, l='MpServer', x=0.50, y=47.43, z=10.50], EntityArmorStand['§fПутеводитель §8- §b/gps'/388, l='MpServer', x=0.50, y=47.18, z=10.50], EntityArmorStand['§fВопрос/Ответ по серверу §8- §b/help'/389, l='MpServer', x=0.50, y=46.93, z=10.50], EntityOtherPlayerMP['Miller_XXD'/2132646, l='MpServer', x=1.43, y=45.00, z=-0.85], EntityArmorStand['§fПомощь по кланам §8- §b/clan help'/390, l='MpServer', x=0.50, y=46.68, z=10.50], EntityArmorStand['§fВключить/Скрыть борд §8- §b/board'/391, l='MpServer', x=0.50, y=46.43, z=10.50], EntityArmorStand['§fВкл/выкл старт-предметов §8- §b/itemtoggle'/392, l='MpServer', x=0.50, y=46.18, z=10.50], EntityArmorStand['§fМагазин ценных предметов §8- §b/shop'/393, l='MpServer', x=0.50, y=45.93, z=10.50], EntityArmorStand['§fСкупщик §8- §b/buyer'/394, l='MpServer', x=0.50, y=45.68, z=10.50], EntityArmorStand['§fБиржа §8- §b/exchange'/395, l='MpServer', x=0.50, y=45.43, z=10.50], EntityArmorStand['§fБоевой пропуск §8- §b/battlepass'/396, l='MpServer', x=0.50, y=45.18, z=10.50], EntityOtherPlayerMP['CrumbleKuki555'/2131885, l='MpServer', x=2.30, y=45.00, z=0.90], EntityArmorStand['§fОзнакомиться с донатом §8- §b/donate'/397, l='MpServer', x=0.50, y=44.93, z=10.50], EntityArmorStand['§fНаши соц.сети §8- §b/links'/398, l='MpServer', x=0.50, y=44.68, z=10.50], EntityArmorStand['Armor Stand'/399, l='MpServer', x=0.50, y=44.25, z=10.50], EntityArmorStand['§5Кейс с сапфирами'/2448, l='MpServer', x=23.50, y=43.98, z=6.50], EntityItem['item.item.snowball'/400, l='MpServer', x=0.50, y=44.25, z=10.50], EntityArmorStand['§6Кейс с ти§eтулами'/2449, l='MpServer', x=23.50, y=43.98, z=-5.50], EntityArmorStand['§cКейс с §6донатом'/2450, l='MpServer', x=24.50, y=44.98, z=0.50], EntityOtherPlayerMP['CIT-41386cd70a79'/149, l='MpServer', x=35.50, y=41.00, z=-23.50], EntityArmorStand['§5Барыга'/152, l='MpServer', x=35.50, y=42.80, z=-23.50], EntityArmorStand['Armor Stand'/153, l='MpServer', x=35.50, y=43.07, z=-23.50], EntityArmorStand['§5▼  §fдонат-валюту §5▼'/154, l='MpServer', x=35.50, y=43.34, z=-23.50], EntityArmorStand['§fпредметов за'/155, l='MpServer', x=35.50, y=43.61, z=-23.50], EntityArmorStand['§f§oМагазин ценных'/156, l='MpServer', x=35.50, y=43.88, z=-23.50], EntityVillager['Villager'/157, l='MpServer', x=45.50, y=41.00, z=25.50], EntityArmorStand['§6Скупщик'/158, l='MpServer', x=45.50, y=42.95, z=25.50], EntityArmorStand['Armor Stand'/159, l='MpServer', x=45.50, y=43.20, z=25.50], EntityArmorStand['§6▼   §f§oсдавая предметы!    §6▼'/160, l='MpServer', x=45.50, y=43.45, z=25.50], EntityArmorStand['§f§oЗарабатывай монетки,'/161, l='MpServer', x=45.50, y=43.70, z=25.50], EntityOtherPlayerMP['CIT-a00f837e2065'/162, l='MpServer', x=7.50, y=45.00, z=7.50], EntityOtherPlayerMP['Magellan'/2103640, l='MpServer', x=68.20, y=41.00, z=17.31], EntityOtherPlayerMP['dai_report_cit'/2109572, l='MpServer', x=22.39, y=43.00, z=-6.28], EntityArmorStand['§bПутеводитель'/165, l='MpServer', x=7.50, y=46.80, z=7.50], EntityOtherPlayerMP['Magellan'/2103640, l='MpServer', x=-7.70, y=41.46, z=24.10], EntityOtherPlayerMP['CIT-d06a68ee8551'/166, l='MpServer', x=34.50, y=41.00, z=-31.50], EntityOtherPlayerMP['windows1'/1375766, l='MpServer', x=43.73, y=40.94, z=14.18], EntityOtherPlayerMP['loltipxdxaxa'/2130953, l='MpServer', x=-5.19, y=44.80, z=50.86], EntityArmorStand['§eХран§aитель опыта'/169, l='MpServer', x=34.50, y=42.80, z=-31.50], EntityArmorStand['Armor Stand'/170, l='MpServer', x=34.50, y=43.07, z=-31.50], EntityArmorStand['§6▼§f         за опыт и сапфиры         §6▼'/171, l='MpServer', x=34.50, y=43.34, z=-31.50], EntityArmorStand['§fи драгоценных предметов'/172, l='MpServer', x=34.50, y=43.61, z=-31.50], EntityArmorStand['§fПокупка невероятных возможности'/173, l='MpServer', x=34.50, y=43.88, z=-31.50], EntityItem['item.item.chorusFruit'/2128272, l='MpServer', x=22.42, y=40.94, z=-26.88], EntityOtherPlayerMP['CIT-76f82d3e625a'/186, l='MpServer', x=-27.53, y=45.00, z=-51.47], EntityArmorStand['§5Сферомант'/189, l='MpServer', x=-27.53, y=46.80, z=-51.47], EntityArmorStand['Armor Stand'/190, l='MpServer', x=-27.53, y=47.07, z=-51.47], EntityArmorStand['§5▼§f         на ценные сферы        §5▼'/191, l='MpServer', x=-27.53, y=47.34, z=-51.47], EntityArmorStand['§fполученных после переплавки,'/192, l='MpServer', x=-27.53, y=47.61, z=-51.47], EntityArmorStand['§fОбмен осколков сфер,'/193, l='MpServer', x=-27.53, y=47.88, z=-51.47], EntityOtherPlayerMP['david_10109'/2130417, l='MpServer', x=0.28, y=44.00, z=-6.49], EntityItem['item.item.netherbrick'/2139638, l='MpServer', x=5.38, y=44.00, z=-12.02], EntityPlayerSP['dexca63'/2133933, l='MpServer', x=13.13, y=44.00, z=-4.85], EntityOtherPlayerMP['CIT-a00f837e2065'/162, l='MpServer', x=7.50, y=45.00, z=7.50], EntityOtherPlayerMP['Miller_XXD'/2132646, l='MpServer', x=1.43, y=45.00, z=-0.85], EntityOtherPlayerMP['CrumbleKuki555'/2131885, l='MpServer', x=2.30, y=45.00, z=0.90], EntityOtherPlayerMP['windows1'/1375766, l='MpServer', x=55.58, y=40.00, z=5.40], EntityOtherPlayerMP['dai_report_cit'/2109572, l='MpServer', x=11.38, y=44.00, z=1.09], EntityOtherPlayerMP['dan5218129'/2127621, l='MpServer', x=-4.77, y=44.00, z=2.93], EntityOtherPlayerMP['urumasun213'/1984244, l='MpServer', x=56.38, y=41.00, z=16.86]]
+	Retry entities: 0 total; []
+	Server brand: §b§lHolyWorld§f (Proxy 4-1)
+	Server type: Non-integrated multiplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:520)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2619)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:558)
+	at net.minecraft.client.main.Main.main(Main.java:116)
+	at Start.main(Start.java:11)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.12.2
+	Operating System: Windows 11 (amd64) version 10.0
+	Java Version: 18.0.2, Amazon.com Inc.
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Amazon.com Inc.
+	Memory: 772679520 bytes (736 MB) / 1830813696 bytes (1746 MB) up to 2063597568 bytes (1968 MB)
+	JVM Flags: 0 total; 
+	IntCache: cache: 11, tcache: 88, allocated: 13, tallocated: 95
+	Launched Version: mcp
+	LWJGL: 2.9.4
+	OpenGL: Intel(R) UHD Graphics GL version 4.6.0 - Build 31.0.101.5333, Intel
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: Yes
+	Is Modded: Very likely; Jar signature invalidated
+	Type: Client (map_client.txt)
+	Resource Packs: 
+	Current Language: ~~ERROR~~ NullPointerException: Cannot invoke "net.minecraft.client.resources.Language.toString()" because the return value of "net.minecraft.client.resources.LanguageManager.getCurrentLanguage()" is null
+	Profiler Position: N/A (disabled)
+	CPU: 8x 12th Gen Intel(R) Core(TM) i3-1215U
+	OptiFine Version: OptiFine_1.12.2_HD_U_C6
+	Render Distance Chunks: 12
+	Mipmaps: 4
+	Anisotropic Filtering: 1
+	Antialiasing: 0
+	Multitexture: false
+	Shaders: null
+	OpenGlVersion: 4.6.0 - Build 31.0.101.5333
+	OpenGlRenderer: Intel(R) UHD Graphics
+	OpenGlVendor: Intel
+	CpuCount: 8

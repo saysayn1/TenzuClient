@@ -1,0 +1,55 @@
+{
+  "minecraft:recipes/transportation/acacia_boat": {
+    "criteria": {
+      "entered_water": "2022-07-28 22:03:26 +0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/dark_oak_boat": {
+    "criteria": {
+      "entered_water": "2022-07-28 22:03:26 +0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/birch_boat": {
+    "criteria": {
+      "entered_water": "2022-07-28 22:03:26 +0300"
+    },
+    "done": true
+  },
+  "minecraft:end/elytra": {
+    "criteria": {
+      "elytra": "2022-07-28 22:03:26 +0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/boat": {
+    "criteria": {
+      "entered_water": "2022-07-28 22:03:26 +0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/jungle_boat": {
+    "criteria": {
+      "entered_water": "2022-07-28 22:03:26 +0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/spruce_boat": {
+    "criteria": {
+      "entered_water": "2022-07-28 22:03:26 +0300"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "forest": "2022-07-28 22:04:54 +0300",
+      "deep_ocean": "2022-07-28 22:03:27 +0300",
+      "beaches": "2022-07-28 22:04:50 +0300",
+      "ocean": "2022-07-28 22:04:36 +0300",
+      "river": "2022-07-28 22:04:25 +0300",
+      "stone_beach": "2022-07-28 22:04:44 +0300"
+    },
+    "done": false
+  }
+}

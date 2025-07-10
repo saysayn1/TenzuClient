@@ -1,0 +1,7 @@
+duration=0.5
+w=512
+h=512
+x=0
+y=0
+from=./inventory.png
+to=textures/gui/container/inventory.png

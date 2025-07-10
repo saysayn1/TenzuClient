@@ -1,0 +1,61 @@
+{
+  "minecraft:recipes/transportation/acacia_boat": {
+    "criteria": {
+      "entered_water": "2022-08-08 19:29:58 +0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/dark_oak_boat": {
+    "criteria": {
+      "entered_water": "2022-08-08 19:29:58 +0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/birch_boat": {
+    "criteria": {
+      "entered_water": "2022-08-08 19:29:58 +0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/boat": {
+    "criteria": {
+      "entered_water": "2022-08-08 19:29:58 +0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/jungle_boat": {
+    "criteria": {
+      "entered_water": "2022-08-08 19:29:58 +0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/spruce_boat": {
+    "criteria": {
+      "entered_water": "2022-08-08 19:29:58 +0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/paper": {
+    "criteria": {
+      "has_reeds": "2022-08-08 19:30:46 +0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/sugar": {
+    "criteria": {
+      "has_reeds": "2022-08-08 19:30:46 +0300"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "forest": "2022-08-08 19:29:43 +0300",
+      "beaches": "2022-08-08 19:31:26 +0300",
+      "extreme_hills_with_trees": "2022-08-08 19:29:41 +0300",
+      "forest_hills": "2022-08-08 19:30:08 +0300",
+      "extreme_hills": "2022-08-08 19:29:30 +0300",
+      "river": "2022-08-08 19:30:02 +0300"
+    },
+    "done": false
+  }
+}
